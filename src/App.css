@@ -24,5 +24,12 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
-  
+}
+
+/*-- Navigation Styling*/
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
 }
