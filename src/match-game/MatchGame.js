@@ -7,12 +7,12 @@ import SingleCard from './SingleCard';
 
 const MatchGame = () => {
 	const cardImages = [
-		{ src: './images/flower1.jpg', matched: false },
-		{ src: './images/flower2.jpg', matched: false },
-		{ src: './images/flower3.jpg', matched: false },
-		{ src: './images/flower4.jpg', matched: false },
-		{ src: './images/flower5.jpg', matched: false },
-		{ src: './images/flower6.jpg', matched: false },
+		{ src: './images/match-game-images/flower1.jpg', matched: false },
+		{ src: './images/match-game-images/flower2.jpg', matched: false },
+		{ src: './images/match-game-images/flower3.jpg', matched: false },
+		{ src: './images/match-game-images/flower4.jpg', matched: false },
+		{ src: './images/match-game-images/flower5.jpg', matched: false },
+		{ src: './images/match-game-images/flower6.jpg', matched: false },
 	];
 
 	const [cards, setCards] = useState([]);
