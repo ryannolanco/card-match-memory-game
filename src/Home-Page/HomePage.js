@@ -19,7 +19,7 @@ const HomePage = () => {
 					</Link>
 				</div>
         <div className="item3">
-					<Link to={'match-game'}>
+					<Link to={'sweet-and-sour'}>
 						<img
 							className="homepage-screenshots"
 							alt="screenshot of game"
