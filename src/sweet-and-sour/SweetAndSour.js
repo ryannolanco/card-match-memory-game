@@ -84,19 +84,7 @@ const SweetAndSour = () => {
 		}
 	};
 
-	useEffect(() => {
-		const timer = setInterval(() => {
-      checkRowOfFour();
-			checkColumnOfFour();
-			checkColumnOfThree();
-      checkRowOfThree();
 
-
-			setCurrentColorArrangment([...currentColorArrangment]);
-		}, 100);
-
-		return () => clearInterval(timer);
-	}, [checkRowOfThree, checkRowOfFour, checkColumnOfFour, checkColumnOfThree, currentColorArrangment]);
 
 	/* -- checking columns and rows -- */
 
@@ -115,6 +103,38 @@ const SweetAndSour = () => {
 		createBoard();
 	}, []);
 	/*------end of create game board------*/
+
+const moveIntoSquareBelow = () => {
+  for (let i = 0; i < 64 - width; i++) {
+    const firstRow = [0, 1, 2, 3, 4, 5, 6, 7]
+    const isFirstRow = firstRow.includes(i);
+
+    if (isFirstRow && currentColorArrangment[i] === '') {
+      let randomNumber = Math.floor(Math.random() * candyColors.length);
+      currentColorArrangment[i] = candyColors[randomNumber]
+    }
+    
+    if ((currentColorArrangment[i + width]) === "") {
+      currentColorArrangment[i + width] = currentColorArrangment[i];
+      currentColorArrangment[i] = ''
+    }
+  }
+}
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    checkRowOfFour();
+    checkColumnOfFour();
+    checkColumnOfThree();
+    checkRowOfThree();
+    moveIntoSquareBelow();
+
+    setCurrentColorArrangment([...currentColorArrangment]);
+  }, 100);
+
+  return () => clearInterval(timer);
+}, [checkRowOfThree, checkRowOfFour, checkColumnOfFour, checkColumnOfThree, moveIntoSquareBelow, currentColorArrangment, ]);
+
 
 	return (
 		<div className="sas-app">
