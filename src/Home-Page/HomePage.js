@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
 	return (
 		<div className="home-page">
-			<h1>hello</h1>
+			<h1>Gaming for no reason</h1>
 			<div className="grid-container">
 				<div className="item3">
 					<Link to={'match-game'}>

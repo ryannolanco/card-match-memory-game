@@ -32,4 +32,9 @@ button:hover {
   display: flex;
   justify-content: center;
   column-gap: 15px;
+  font-size: 40px;
+}
+
+.nav-bar link {
+  color: white;
 }

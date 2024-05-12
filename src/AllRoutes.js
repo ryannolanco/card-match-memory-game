@@ -5,6 +5,9 @@ import HomePage from './Home-Page/HomePage';
 import CandyCrush from './sweet-and-sour/SweetAndSour';
 import SweetAndSour from './sweet-and-sour/SweetAndSour';
 
+import "./App.css"
+
+
 const AllRoutes = () => {
 	return (
 		<>
