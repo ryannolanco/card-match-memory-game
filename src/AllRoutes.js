@@ -5,25 +5,23 @@ import HomePage from './Home-Page/HomePage';
 import CandyCrush from './sweet-and-sour/SweetAndSour';
 import SweetAndSour from './sweet-and-sour/SweetAndSour';
 
-import "./App.css"
-
+import './App.css';
 
 const AllRoutes = () => {
 	return (
 		<>
 			<div className="nav-bar">
-				<ul>
-					<li>
-						<Link to={'/'}>Home</Link>
-					</li>
-					<li>
+				<h1>
+					<Link to={'/'}>Home</Link>
+				</h1>
+
+				{/* <li>
 						<Link to={'/match-game'}>Match Game</Link>
-					</li>
-				</ul>
+					</li> */}
 			</div>
 
 			<Routes>
-				<Route path="/" element={<HomePage />} />
+				<Route path="/" element={<MatchGame />} />
 				<Route path="/match-game" element={<MatchGame />} />
 				<Route path="/sweet-and-sour" element={<SweetAndSour />} />
 			</Routes>

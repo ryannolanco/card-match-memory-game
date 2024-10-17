@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
 	return (
 		<div className="home-page">
-			<h1>Gaming for no reason</h1>
+			{/* <h1>Gaming for no reason</h1> */}
 			<div className="grid-container">
 				<div className="item3">
 					<Link to={'match-game'}>
@@ -17,7 +17,7 @@ const HomePage = () => {
 							src="./images/home-page-images/memory-game-screenshot.png"
 						/>
 					</Link>
-				</div>
+				{/* </div>
         <div className="item3">
 					<Link to={'sweet-and-sour'}>
 						<img
@@ -34,7 +34,7 @@ const HomePage = () => {
 							alt="screenshot of game"
 							src="./images/home-page-images/memory-game-screenshot.png"
 						/>
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 		</div>
